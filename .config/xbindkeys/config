@@ -1,0 +1,36 @@
+###########################
+# xbindkeys configuration #
+###########################
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+# Increase backlight
+"xbacklight -inc 5 -steps 1"
+  XF86MonBrightnessUp
+
+# Decrease backlight
+"xbacklight -dec 5 -steps 1"
+  XF86MonBrightnessDown
+
+# Increase volume
+"pactl set-sink-volume @DEFAULT_SINK@ +5%"
+   XF86AudioRaiseVolume
+
+# Decrease volume
+"pactl set-sink-volume @DEFAULT_SINK@ -5%"
+   XF86AudioLowerVolume
+
+# Mute volume
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+   XF86AudioMute
+
+"maim -s -u | xclip -selection clipboard -t image/png -i"
+    Print
+##################################
+# End of xbindkeys configuration #
+##################################

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# This file runs when a DM logs you into a graphical session.
+# If you use startx/xinit like a Chad, this file will also be sourced.
+
+setxkbmap -layout fr
+
+# xcompmgr for transparency
+picom &
+
+# xbindkeys to directly keyboard related commands such as mute
+xbindkeys &
